@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QEIZZZWEB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">QEIZZZWEB</div>
+    <nav class="nav">
+      <a href="#home" class="btn">Home</a>
+      <a href="#skill" class="btn">Skill</a>
+      <a href="#project" class="btn">Project</a>
+      <a href="#contact" class="btn">Contact</a>
+    </nav>
+  </header>
+
+  <!-- BODY 1 -->
+  <section id="home" class="body1">
+    <div class="intro">
+      <h1 class="main-text fade-slide delay-1">MY NAME QEIS</h1>
+      <p class="sub-text fade-slide delay-2">WELCOME TO MY PORTFOLIO</p>
+    </div>
+  </section>
+
+  <!-- BODY 2 -->
+  <section class="body2">
+    <div class="wrapper-box">
+      <div class="bg-box"></div>
+
+      <div class="card">
+        <div class="card-details">
+          <p class="text-title">HALO NAMA SAYA QEIS</p>
+          <p class="text-body">
+            NAMA SAYA ADALAH QEIS ALVARO ASY SY'BI SAYA ADALAH SEORANG PELAJAR
+            DI SEKOLAH KODEIN INDONESIA DAN SEDANG MEMPELAJARI WEB DEVELOPER
+          </p>
+        </div>
+        <button class="card-button">CONTACT ME</button>
+      </div>
+
+      <div class="photo-card">
+        <img src="foto.png" alt="foto saya">
+      </div>
+    </div>
+  </section>
+
+  <!-- BODY 3 -->
+  <section id="skill" class="body3">
+    <div class="bg-box3">
+      <div class="skill-top-label">SKILL</div>
+
+      <div class="skill-wrapper">
+
+        <div class="container">
+          <div class="skill-box">
+            <span class="title">HTML</span>
+            <div class="skill-bar">
+              <span class="skill-per html">
+                <span class="tooltip">90%</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <span class="title">CSS</span>
+            <div class="skill-bar">
+              <span class="skill-per scss">
+                <span class="tooltip">80%</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <span class="title">JavaScript</span>
+            <div class="skill-bar">
+              <span class="tooltip">50%</span>
+              <span class="skill-per Boostrap"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="skill-box">
+            <span class="title">React JS</span>
+            <div class="skill-bar">
+              <span class="skill-per html">
+                <span class="tooltip">90%</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <span class="title">Figma</span>
+            <div class="skill-bar">
+              <span class="skill-per scss">
+                <span class="tooltip">80%</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="skill-box">
+            <span class="title">Canva</span>
+            <div class="skill-bar">
+              <span class="skill-per Boostrap">
+                <span class="tooltip">50%</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BODY 4 -->
+  <section id="project" class="body4">
+    <div class="project-wrapper">
+      <div class="project-title">PROJECT</div>
+
+      <div class="project-cards">
+        <div class="project-card">
+          <img src="p1.png">
+          <h3>PROJECT 1</h3>
+        </div>
+
+        <div class="project-card">
+          <img src="p2.png">
+          <h3>PROJECT 2</h3>
+        </div>
+
+        <div class="project-card">
+          <img src="p3.png">
+          <h3>PROJECT 3</h3>
+        </div>
+
+        <div class="project-card">
+          <img src="p4.png">
+          <h3>PROJECT 4</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+
+      <div class="contact-left">
+        <h2>Contact Me</h2>
+        <p>Hubungi saya untuk kerja sama atau pertanyaan lebih lanjut.</p>
+      </div>
+
+      <div class="contact-form">
+        <h3>Contact Me</h3>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button>Send Message</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-left">
+        <h2>QEIZZ WEB</h2>
+        <p>Personal Portfolio Website</p>
+      </div>
+
+      <div class="footer-center">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#skill">Skill</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <h3>Social</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Github</a></li>
+          <li><a href="#">Email</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+      <p>© 2026 QEIZZ WEB | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script>
+  const bars = document.querySelectorAll(".skill-per");
+
+  function animateSkills() {
+    bars.forEach(bar => {
+      const barTop = bar.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+
+      if (barTop < screenHeight - 50) {
+        bar.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", animateSkills);
+</script>
+
+</body>
+</html>
