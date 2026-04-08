@@ -12,19 +12,42 @@
 
   <!-- Header -->
   <header class="header">
-    <div class="logo">QEIZZZWEB</div>
-    <nav class="nav">
-      <a href="#home" class="btn">Home</a>
-      <a href="#skill" class="btn">Skill</a>
-      <a href="#project" class="btn">Project</a>
-      <a href="#contact" class="btn">Contact</a>
-    </nav>
-  </header>
+  <div class="logo">QEIZZZWEB</div>
+  
+  <div class="menu-icon" id="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav class="nav" id="nav-menu">
+    <a href="#home" class="btn">Home</a>
+    <a href="#skill" class="btn">Skill</a>
+    <a href="#project" class="btn">Project</a>
+    <a href="#contact" class="btn">Contact</a>
+  </nav>
+</header>
+
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuIcon.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    menuIcon.classList.toggle('active');
+  });
+
+  // Menutup menu saat link di klik
+  document.querySelectorAll('.btn').forEach(n => n.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    menuIcon.classList.remove('active');
+  }));
+</script>
 
   <!-- BODY 1 -->
   <section id="home" class="body1">
     <div class="intro">
-      <h1 class="main-text fade-slide delay-1">MY NAME QEIS</h1>
+      <h1 class="main-text fade-slide delay-1">I AM QEIS </h1>
       <p class="sub-text fade-slide delay-2">WELCOME TO MY PORTFOLIO</p>
     </div>
   </section>
@@ -150,23 +173,40 @@
 
   <!-- CONTACT -->
   <section id="contact" class="contact-section">
-    <div class="contact-container">
+  <div class="contact-container">
 
-      <div class="contact-left">
-        <h2>Contact Me</h2>
-        <p>Hubungi saya untuk kerja sama atau pertanyaan lebih lanjut.</p>
+    <div class="contact-left">
+      <h2></h2>
+      <p>Hubungi contact saya bila di perlukan
+      </p>
+
+      <div class="contact-info">
       </div>
-
-      <div class="contact-form">
-        <h3>Contact Me</h3>
-        <input type="text" placeholder="Name">
-        <input type="email" placeholder="Email">
-        <textarea placeholder="Message"></textarea>
-        <button>Send Message</button>
-      </div>
-
     </div>
-  </section>
+
+    <form class="contact-form">
+      <h3>Send Message</h3>
+
+      <div class="input-group">
+        <input type="text" required>
+        <label>Name</label>
+      </div>
+
+      <div class="input-group">
+        <input type="email" required>
+        <label>Email</label>
+      </div>
+
+      <div class="input-group">
+        <textarea rows="4" required></textarea>
+        <label>Message</label>
+      </div>
+
+      <button type="submit" class="send-btn">Send Message ✉️</button>
+    </form>
+
+  </div>
+</section>
 
   <!-- FOOTER -->
   <footer class="footer">

@@ -442,4 +442,66 @@ section{
     padding:40px 20px;
   }
 
+  /* ================= RESPONSIVE MENU (TAMBAHAN) ================= */
+
+/* Sembunyikan ikon di layar laptop */
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-icon span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Style untuk Mobile (HP) */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex; /* Tampilkan ikon di HP */
+  }
+
+  .nav {
+    position: fixed;
+    right: -100%; /* Sembunyikan menu di kanan luar layar */
+    top: 80px;
+    flex-direction: column;
+    background: #a9c4e0;
+    width: 100%;
+    text-align: center;
+    transition: 0.4s;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    gap: 10px;
+  }
+
+  .nav.active {
+    right: 0; /* Menu muncul ke tengah saat aktif */
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Animasi Ikon Hamburger jadi Silang (X) saat diklik */
+  .menu-icon.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-icon.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-icon.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
 }
